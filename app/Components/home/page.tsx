@@ -13,7 +13,7 @@ function page() {
     <div>
       <h1>This is the Home Page</h1>
       <p>Data: {data}</p>
-      <p>Str: Shubhranshu</p>
+      <p>Str: Hozbbiizzzzz</p>
     </div>
   )
 }
