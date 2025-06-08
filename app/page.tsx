@@ -18,7 +18,7 @@ export default function Page() {
   return (
     <div>
       <h1>Welcome to the Main Page</h1>
-      <button onClick={handleClick}>Go to Home1</button>
+      <button onClick={handleClick}>Go to Home5</button>
       {/* <button onClick={handleClick2}>Go to About</button> */}
     </div>
   );
