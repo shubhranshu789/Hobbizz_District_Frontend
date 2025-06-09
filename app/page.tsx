@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 
 import Auth from './Components/Auth/page'
 
+
 export default function Page() {
   const router = useRouter();
   const data = 20;

@@ -7,7 +7,9 @@ import { Menu, LogOut, Home, Settings, User, Bell, Search, Sparkles, Zap, Star }
 import Link from "next/link"
 
 import { useRouter } from 'next/navigation';
-// import "../../Components/home"
+
+
+
 
 
 function page() {
@@ -27,6 +29,11 @@ function page() {
   const gotohome = () => {
     router.push('../../Components/home');
   }
+
+  const gotoabout = () => {
+    router.push('../../Components/About2');
+  }
+
 
 
 
@@ -63,7 +70,7 @@ function page() {
               {[
                 { name: "Home", icon: Home , id : "Home"},
                 { name: "Add Activity", icon: Settings , id : "Add" },
-                { name: "About", icon: User },
+                { name: "About", icon: User , id : "About" },
                 { name: "Contact", icon: Bell },
               ].map((item, index) => (
                 <motion.div
@@ -84,6 +91,9 @@ function page() {
                         }
                         if (item.id === "Home") {
                           gotohome();
+                        }
+                        if (item.id === "About") {
+                          gotoabout();
                         }
                       }}
                     >

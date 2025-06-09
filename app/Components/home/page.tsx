@@ -8,10 +8,20 @@ import { Menu, LogOut, Home, Settings, User, Bell, Search, Sparkles, Zap, Star }
 import Link from "next/link"
 
 import Navabr from "../Navbar/page"
+import { useRouter } from 'next/navigation';
+
+
 
 export default function Component() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [currentTime, setCurrentTime] = useState(new Date())
+
+    const router = useRouter();
+  
+    const gotoreviewactivity = () => {
+      router.push('../../Components/ReviewActivity');
+    };
+  
 
   const userData = localStorage.getItem('user');
 
@@ -199,7 +209,8 @@ export default function Component() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button
+              <Button 
+                onClick={() => {gotoreviewactivity()}}
                 size="lg"
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg font-semibold shadow-lg"
               >
